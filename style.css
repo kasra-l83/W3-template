@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+header{
+    height: 38px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    display: flex;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 0 16px;
+}
+a:hover{
+    color: black;
+    background-color: white;
+}
+.logo{
+    background-color: #009688;
+}
+#material-icons{
+    margin-right: 10px;
+}
+.logo:hover{
+    background-color: #CCCCCC;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 0 16px;
+    cursor: pointer;
+    color: white;
+}
+.dropdown:hover{
+    color: black;
+    background-color: #CCCCCC;
+}
+.fa{
+    margin-left: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #CCCCCC}
+.dropdown:hover .dropdown-content {display: block;}
+#search{
+    width: 46px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+#search:hover{
+    background-color: #009688;
+}
+#menu{
+    display: none;
+}
+#logo{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #search{
+        display: none;
+    }
+    span{
+        display: none;
+    }
+    #menu{
+        width: 46px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border: none;
+        cursor: pointer;
+        color: white;
+        position: relative;
+    }
+    #menu:hover{
+        background-color: white;
+        color: black;
+    }
+    #logo{
+        display: flex;
+    }
+    #modal{
+        display: none;
+        background-color: black;
+        position: absolute;
+        top: 38px;
+        width: 100vw;
+    }
+    #modal a{
+        padding: 8px 16px;
+    }
+    #modal a:hover{
+        background-color: #CCCCCC;
+    }
+}

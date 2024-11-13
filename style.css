@@ -10,6 +10,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 span{
     display: flex;
@@ -158,6 +161,48 @@ h1{
     height: 100vh;
     width: 100vw;
     display: none;
+}
+#content2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 16px;
+    row-gap: 20px;
+    width: 100%;
+}
+#content2 h2{
+    font-size: 30px;
+}
+#content2 h5{
+    font-size: 15px;
+    margin: 15px 0;
+}
+#team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.persons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+.persons img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.persons img:hover{
+    opacity: 60%;
+}
+.persons h4{
+    font-size: 24px;
+}
+.persons h6{
+    font-size: 15px;
 }
 @media only screen and (max-width: 600px){
     #search, span{

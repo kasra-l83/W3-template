@@ -15,7 +15,7 @@ span{
     display: flex;
     height: 100%;
 }
-a{
+header a{
     text-decoration: none;
     color: white;
     height: 100%;
@@ -24,17 +24,17 @@ a{
     font-size: 15px;
     padding: 0 16px;
 }
-a:hover{
+header a:hover{
     color: black;
     background-color: white;
 }
-.logo{
+.logo, #search:hover, h1:hover{
     background-color: #009688;
 }
 #material-icons{
     margin-right: 10px;
 }
-.logo:hover{
+.logo:hover, .dropdown:hover, .dropdown-content a:hover{
     background-color: #CCCCCC;
 }
 .dropdown {
@@ -50,9 +50,8 @@ a:hover{
 }
 .dropdown:hover{
     color: black;
-    background-color: #CCCCCC;
 }
-.fa{
+.dropdown .fa{
     margin-left: 5px;
 }
 .dropdown-content {
@@ -71,7 +70,6 @@ a:hover{
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #CCCCCC}
 .dropdown:hover .dropdown-content {display: block;}
 #search{
     width: 46px;
@@ -84,20 +82,85 @@ a:hover{
     cursor: pointer;
     color: white;
 }
-#search:hover{
-    background-color: #009688;
-}
 #menu{
     display: none;
 }
 #logo{
     display: none;
 }
+#modal{
+    display: none;
+}
+#content1{
+    position: relative;
+}
+img{
+    width: 100%;
+    max-height: 80vh;
+}
+h1{
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    font-size: 24px;
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+#modal1{
+    position: absolute;
+    width: 900px;
+    background-color: #009688;
+    min-height: 230px;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation-name: modal1;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards;
+}
+@keyframes modal1 {
+    from {top: 0px;}
+    to {top: 100px;}
+}
+#modal1 div{
+    background-color: white;
+    padding: 1px 0;
+    color: black;
+}
+#modal1 p{
+    margin: 15px 16px;
+}
+#modal1 button{
+    width: 43px;
+    height: 38px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    border: none;
+    background-color: #009688;
+    color: white;
+    cursor: pointer;
+}
+#modal1 button:hover{
+    color: black;
+    background-color: #CCCCCC;
+}
+#black{
+    position: fixed;
+    top: 0;
+    background-color: black;
+    opacity: 80%;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+}
 @media only screen and (max-width: 600px){
-    #search{
-        display: none;
-    }
-    span{
+    #search, span{
         display: none;
     }
     #menu{
@@ -120,11 +183,11 @@ a:hover{
         display: flex;
     }
     #modal{
-        display: none;
         background-color: black;
         position: absolute;
         top: 38px;
         width: 100vw;
+        z-index: 1;
     }
     #modal a{
         padding: 8px 16px;

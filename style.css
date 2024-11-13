@@ -166,7 +166,7 @@ h1{
     width: 100vw;
     display: none;
 }
-#content2{
+#content2, #content4{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,10 +174,10 @@ h1{
     row-gap: 20px;
     width: 100%;
 }
-#content2 h2{
+#content2 h2, #content4 h2{
     font-size: 30px;
 }
-#content2 h5{
+#content2 h5, #content4 h5{
     font-size: 15px;
     margin: 15px 0;
 }
@@ -302,6 +302,66 @@ nav a{
 nav a:hover{
     background-color: #CCCCCC;
 }
+#package{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    column-gap: 15px;
+}
+ul{
+    border: solid 1px gainsboro;
+}
+ul:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+li{
+    list-style: none;
+    padding: 16px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px gainsboro;
+}
+li:first-child{
+    height: 100px;
+    font-size: 24px;
+    color: white;
+    background-color: black;
+}
+li:last-child{
+    background-color: gainsboro;
+}
+#pro{
+    background-color: gray;
+}
+b, #package i{
+    margin-right: 5px;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.price h3{
+    font-size: 30px;
+}
+.price h6{
+    font-size: 15px;
+    color: gray;
+}
+#package button{
+    padding: 12px 24px;
+    border: none;
+    background-color: #009688;
+    color: white;
+    font-size: 15px;
+}
+#package button:hover{
+    background-color: #CCCCCC;
+    color: black;
+    cursor: pointer;
+}
 @media only screen and (max-width: 600px){
     #search, span{
         display: none;
@@ -337,5 +397,9 @@ nav a:hover{
     }
     #modal a:hover{
         background-color: #CCCCCC;
+    }
+    #package{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 15px;
     }
 }

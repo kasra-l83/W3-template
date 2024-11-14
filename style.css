@@ -85,13 +85,7 @@ header a:hover{
     cursor: pointer;
     color: white;
 }
-#menu{
-    display: none;
-}
-#logo{
-    display: none;
-}
-#modal{
+#menu, #logo, #modal, a div{
     display: none;
 }
 #content1{
@@ -113,7 +107,7 @@ h1{
 }
 #modal1{
     position: absolute;
-    width: 900px;
+    width: 60%;
     background-color: #009688;
     min-height: 230px;
     color: white;
@@ -203,23 +197,23 @@ h1{
 .persons img:hover{
     opacity: 60%;
 }
-.persons h4{
+.persons h4, .box2 h3{
     font-size: 24px;
 }
-.persons h6{
+.persons h6, .box2 p, footer p{
     font-size: 15px;
 }
 #content3{
     background-color: #333333;
     padding: 64px 8px;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
     position: relative;
 }
 #box1{
     color: white;
-    max-width: 350px;
+    margin-bottom: 15px;
 }
 #box1 h2{
     font-size: 30px;
@@ -230,9 +224,7 @@ h1{
     line-height: 1.5;
 }
 .box2{
-    height: 100%;
     background-color: white;
-    max-width: 350px;
 }
 .box2 img{
     height: 50%;
@@ -240,14 +232,8 @@ h1{
 .box2 h3, .box2 h5, .box2 p{
     margin: 10px 16px;
 }
-.box2 h3{
-    font-size: 24px;
-}
-.box2 h5{
+.box2 h5, footer h3{
     font-size: 20px;
-}
-.box2 p{
-    font-size: 15px;
 }
 #plus{
     position: absolute;
@@ -358,7 +344,7 @@ b, #package i{
     color: white;
     font-size: 15px;
 }
-#package button:hover{
+#package button:hover, form button:hover, footer span i:hover, footer a:hover{
     background-color: #CCCCCC;
     color: black;
     cursor: pointer;
@@ -416,11 +402,6 @@ form button{
     color: white;
     padding: 8px 16px;
 }
-form button:hover{
-    background-color: #CCCCCC;
-    color: black;
-    cursor: pointer;
-}
 #map{
     filter: grayscale(50%);
 }
@@ -436,37 +417,20 @@ footer{
     position: relative;
     margin-top: -4px;
 }
-footer h3{
-    font-size: 20px;
-}
 footer span i{
     padding: 8px 16px;
     background-color: #009688;
-}
-footer span i:hover{
-    color: black;
-    background-color: #CCCCCC;
-    cursor: pointer;
 }
 footer span{
     display: flex;
     column-gap: 5px;
 }
-footer p{
-    font-size: 15px;
-}
 footer a{
     position: absolute;
     right: 16px;
     padding: 16px;
-    background-color: black;
     border: none;
     color: white;
-}
-footer a:hover{
-    background-color: #CCCCCC;
-    color: black;
-    cursor: pointer;
 }
 footer div{
     position: absolute;
@@ -476,14 +440,11 @@ footer div{
     background-color: #009688;
     color: white;
 }
-a div{
-    display: none;
-}
 a:hover div{
     display: block;
 }
 @media only screen and (max-width: 600px){
-    #search, span{
+    #search, span, footer a{
         display: none;
     }
     #menu{
@@ -509,14 +470,17 @@ a:hover div{
         background-color: black;
         position: absolute;
         top: 38px;
-        width: 100vw;
         z-index: 1;
+        width: 100%;
     }
     #modal a{
         padding: 8px 16px;
     }
     #modal a:hover{
         background-color: #CCCCCC;
+    }
+    #content3{
+        grid-template-columns: repeat(1, 1fr);
     }
     #package{
         grid-template-columns: repeat(1, 1fr);

@@ -19,14 +19,12 @@ document.getElementById("open").onclick= function(){
     modal1.style.display= "flex";
     modal1.style.justifyContent= "center";
 }
-// function checkwindow(){
-//     if(window.innerWidth> 600){
-//         close()
-//     }else open()
-// }
-// window.addEventListener("resize", function(){
-//     checkwindow();
-// })
+function checkwindow(){
+    if(window.innerWidth> 600) close()
+}
+window.addEventListener("resize", function(){
+    checkwindow();
+})
 const modal2= document.getElementById("modal2")
 document.getElementById("plus").onclick= function(){
     modal2.style.display= "flex";
